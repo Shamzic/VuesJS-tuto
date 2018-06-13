@@ -20,13 +20,21 @@
         <p>My age is : {{ age }}</p>
         <div id="canvas" @mousemove="updateXY">{{ x }}, {{ y }}</div>
         <a v-on:click.prevent="clickprev" href="http://www.simonhamery.com">le boss</a> -->
-        <h1>KEYBOARD EVENTS</h1>
+        <!-- <h1>KEYBOARD EVENTS</h1>
         <label> Name : </label>
         <input type="text" v-model="name">
         <span> {{ name }}</span>
         <label>Age : </label>
         <input type="text" v-model="age">
-        <span> {{ age }}</span>
+        <span> {{ age }}</span> -->
+        <h1>Computed properties</h1>
+        <button v-on:click="a++" > Add to a </button>
+        <button v-on:click="b++" > Add to b </button>
+        <p>A - {{ a }}</p>
+        <p>B - {{ b }}</p>
+        <p>Age + A = {{ addToA }}</p>
+        <p>Age + B = {{ addToB }}</p>
+
 
     </div>
     <script src="app.js"></script>

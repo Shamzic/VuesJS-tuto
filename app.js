@@ -5,9 +5,11 @@ new Vue({
     job: 'Ninja',
     website: 'http://simonhamery.com',
     websiteTag: '<a href="http://simonhamery.com"> The Net Ninja website </a>',
-    age: '',
+    age: 20,
     x: 0,
-    y: 0
+    y: 0,
+    a: 0,
+    b: 0
   },
   methods: {
     greet: function(time){
@@ -32,5 +34,20 @@ new Vue({
     logAge: function() {
       console.log("you entered your age");
     }
+    // ,
+    // addToA: function() {
+    //     return this.a+ this.age
+    // },
+    // addToB: function() {
+    //     return this.b+ this.age
+    // }
+  },
+  computed: {
+    addToA: function() {
+        return this.a+ this.age
+    },
+    addToB: function() {
+        return this.b+ this.age
+    },
   }
 });
