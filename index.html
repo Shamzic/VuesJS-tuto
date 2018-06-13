@@ -2,10 +2,25 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>VueJS Tutorials test</title>
+    <title>VueJS Tutorials test 1</title>
+    <link href="styles.css" rel="stylesheet"/>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   </head>
   <body>
+    <div id="vue-app">
+        <!-- <h1>Data Binding : {{ greet('night')}} </h1>
+        <a v-bind:href="website"> The Net Ninja </a>
+        <input type="text" v-bind:value="job"/>
+        <p v-html="websiteTag"></p> -->
+        <h1> EVENTS </h1>
+        <button @click="add(1)"> Add a year</button>
+        <button @click="sub(1)"> Subtract a year</button>
+        <button @dblclick="add(10)"> Add 10 year</button>
+        <button @dblclick="sub(10)"> Subtract 10 year</button>
+        <p>My age is : {{ age }}</p>
+        <div id="canvas" @mousemove="updateXY">{{ x }}, {{ y }}</div>
 
+    </div>
+    <script src="app.js"></script>
   </body>
 </html>
