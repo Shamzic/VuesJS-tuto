@@ -25,6 +25,12 @@ new Vue({
     },
     clickprev: function() {
       alert('YO');
+    },
+    logName: function() {
+      console.log("you entered your name");
+    },
+    logAge: function() {
+      console.log("you entered your age");
     }
   }
 });

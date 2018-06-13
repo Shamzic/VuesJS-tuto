@@ -12,14 +12,19 @@
         <a v-bind:href="website"> The Net Ninja </a>
         <input type="text" v-bind:value="job"/>
         <p v-html="websiteTag"></p> -->
-        <h1> EVENTS </h1>
+        <!-- <h1> EVENTS </h1>
         <button @click.once="add(1)"> Add a year</button>
         <button @click="sub(1)"> Subtract a year</button>
         <button @dblclick="add(10)"> Add 10 year</button>
         <button @dblclick="sub(10)"> Subtract 10 year</button>
         <p>My age is : {{ age }}</p>
         <div id="canvas" @mousemove="updateXY">{{ x }}, {{ y }}</div>
-        <a v-on:click.prevent="clicke" href="http://www.simonhamery.com">le boss</a>
+        <a v-on:click.prevent="clickprev" href="http://www.simonhamery.com">le boss</a> -->
+        <h1>KEYBOARD EVENTS</h1>
+        <label> Name : </label>
+        <input type="text" v-on:keyup.alt.enter="logName">
+        <label>Age : </label>
+        <input type="text" v-on:keyup.alt.enter="logAge">
 
     </div>
     <script src="app.js"></script>
