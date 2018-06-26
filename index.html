@@ -4,17 +4,34 @@
     <meta charset="utf-8">
     <title>VueJS Tutorials test 1</title>
     <link href="styles.css" rel="stylesheet"/>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
     <div id="vue-app">
-      <h1> Conditionals </h1>
-      <button v-on:click="error = !error"> Toggle Error </button>
-      <button v-on:click="succes = !succes"> Toggle Succes </button>
-      <!-- <p v-if="error"> There has been an error</p>
-      <p v-else-if="succes"> Wooo succes</p> -->
-      <p v-show="error"> ERROR </p>
-      <p v-show="succes"> wooooooo SUCCESS </p>
+      <h1> Looping throug lists </h1>
+      <ul>
+        <li v-for='(c,index) in characters'>{{index}} . {{c}}</li>
+      </ul>
+
+      <ul>
+        <li v-for="(ninja,index) in ninjas">{{ index }} . {{ninja.name}} - {{ ninja.age}}</li>
+      </ul>
+
+      <template v-for="(ninja,index) in ninjas">
+        <h3>{{ index }} . {{ninja.name}}</h3>
+        <p>{{ ninja.age }}</p>
+      </template>
+
+      <template v-for="n in ninjas">
+        <div v-for="(key,val) in n">
+          <p>{{ key}} _ {{ val }}</p>
+
+        </div>
+
+      </template>
+
+
     </div>
     <script src="app.js"></script>
   </body>
