@@ -9,29 +9,19 @@
   </head>
   <body>
     <div id="vue-app">
-      <h1> Looping throug lists </h1>
-      <ul>
-        <li v-for='(c,index) in characters'>{{index}} . {{c}}</li>
-      </ul>
+        <!-- bag image -->
+        <div id="bag" v-bind:class= "{ burst: ended}"> </div>
 
-      <ul>
-        <li v-for="(ninja,index) in ninjas">{{ index }} . {{ninja.name}} - {{ ninja.age}}</li>
-      </ul>
-
-      <template v-for="(ninja,index) in ninjas">
-        <h3>{{ index }} . {{ninja.name}}</h3>
-        <p>{{ ninja.age }}</p>
-      </template>
-
-      <template v-for="n in ninjas">
-        <div v-for="(key,val) in n">
-          <p>{{ key}} _ {{ val }}</p>
-
+        <!-- bag health -->
+        <div id="bag-health">
+          <div v-bind:style="{width: health +'%'}"> </div>
         </div>
 
-      </template>
-
-
+        <!-- controls -->
+        <div id="controls">
+          <button v-on:click="punch" v-show="!ended" type="button" name="Push-button">Push</button>
+          <button v-on:click="restart"  type="button" name="Restart-button">Restart</button>
+        </div>
     </div>
     <script src="app.js"></script>
   </body>
