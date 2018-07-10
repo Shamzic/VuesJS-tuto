@@ -8,16 +8,13 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
-    <h1>Multiple vue instances</h1>
 
-    <div id="vue-app-one">
-      <h2>Vue app one</h2>
-      <greeting> </greeting>
-    </div>
-
-    <div id="vue-app-two">
-        <h2>Vue app two</h2>
-        <greeting> </greeting>
+    <div id="vue-app">
+      <h2>Refs</h2>
+      <input type="text" ref="inpute">
+      <button v-on:click="readRefs">Submit</button>
+      <p>Your fav food : {{ output }}</p>
+      <div ref="test"> Hello </div>
     </div>
 
     <script src="app.js"></script>
